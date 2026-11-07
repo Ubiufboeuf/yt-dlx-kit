@@ -1,0 +1,19 @@
+{
+  "name": "@yt-dlx/kit",
+  "version": "1.0.0",
+  "description": "Complete YT-DLX toolkit",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "dependencies": {
+    "@yt-dlx/kit": "^1.0.0",
+    "@yt-dlx/media": "0.4.0",
+    "@yt-dlx/streams": "0.1.1",
+    "@yt-dlx/yt": "0.4.5"
+  },
+  "license": "MIT"
+}
