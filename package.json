@@ -1,18 +1,60 @@
+
 {
   "name": "@yt-dlx/kit",
   "version": "1.1.1",
-  "description": "Complete YT-DLX toolkit",
-  "type": "module",
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.js",
-    "index.d.ts"
+  "description": "A modular TypeScript toolkit for downloading, processing, and streaming media using yt-dlp, FFmpeg, and MP4Box.",
+  "keywords": [
+    "yt-dlx",
+    "yt-dlp",
+    "youtube",
+    "video",
+    "download",
+    "media",
+    "streaming",
+    "dash",
+    "ffmpeg",
+    "mp4box",
+    "typescript"
   ],
+  "homepage": "https://github.com/Ubiufboeuf/yt-dlx-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ubiufboeuf/yt-dlx-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ubiufboeuf/yt-dlx-kit/issues"
+  },
+  "license": "MIT",
+  "author": "mAngo",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "bun index.ts",
+    "dev": "bun --watch index.ts",
+    "build": "bun build.ts && dts-bundle-generator --no-check -o dist/index.d.ts src/index.ts",
+    "prepublishOnly": "bun run build"
+  },
   "dependencies": {
     "@yt-dlx/media": "0.5.1",
     "@yt-dlx/streams": "0.1.1",
     "@yt-dlx/yt": "0.4.5"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "@types/bun": "latest",
+    "dts-bundle-generator": "9.5.1",
+    "typescript": "5"
+  },
+  "private": false
 }
