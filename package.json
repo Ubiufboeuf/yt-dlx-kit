@@ -1,6 +1,6 @@
 {
   "name": "@yt-dlx/kit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Complete YT-DLX toolkit",
   "type": "module",
   "main": "./index.js",
@@ -10,7 +10,7 @@
     "index.d.ts"
   ],
   "dependencies": {
-    "@yt-dlx/media": "0.5.0",
+    "@yt-dlx/media": "0.5.1",
     "@yt-dlx/streams": "0.1.1",
     "@yt-dlx/yt": "0.4.5"
   },
